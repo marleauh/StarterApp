@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App.ViewModels"
+             x:Class="App.Views.MainPage"
+             Title="Home Page">
+			 
+    <ScrollView>
+        <VerticalStackLayout 
+            Spacing="25" 
+            Padding="30,0" 
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+                
+            <Label 
+                Text="This is a Bare-Bones Project"
+                SemanticProperties.HeadingLevel="Level1"                
+                FontSize="30"
+                HorizontalOptions="Center" />
+            
+            <Label 
+                Text="Used to build future applications"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Button 
+                x:Name="GitHubBtn"
+                Text="My GitHub"
+                SemanticProperties.Hint="Redirects you to my GitHub repository"
+                SemanticProperties.Description="You are free to clone and use my starting point to create something amazing!"
+                Command="{Binding GitHubCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+ 
+</ContentPage>

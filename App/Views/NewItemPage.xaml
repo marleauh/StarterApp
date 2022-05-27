@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.NewItemPage"
+             Title="New Item Page">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="20">
+
+                <!--<Label Text="Item Name: *" FontSize="Medium" />-->
+                <Entry Placeholder="Item Name *" Text="{Binding ItemName, Mode=TwoWay}" FontSize="Medium" />
+
+                <!--<Label Text="Item Number: *" FontSize="Medium" />-->
+                <Entry Placeholder="Item Number *" Text="{Binding ItemNumber, Mode=TwoWay}" FontSize="Medium" />
+
+                <!--<Label Text="Item Price: *" FontSize="Medium" />-->
+                <Entry Placeholder="Item Price *" Text="{Binding ItemPrice, Mode=TwoWay}" FontSize="Medium" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" Clicked="OnCancelButtonClicked" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Save" Clicked="OnSaveButtonClicked" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
