@@ -16,10 +16,9 @@
                 <!--<Label Text="Item Price: *" FontSize="Medium" />-->
                 <Entry Placeholder="Item Price *" Text="{Binding ItemPrice, Mode=TwoWay}" FontSize="Medium" />
 
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="Cancel" Clicked="OnCancelButtonClicked" HorizontalOptions="FillAndExpand"></Button>
-                    <Button Text="Save" Clicked="OnSaveButtonClicked" HorizontalOptions="FillAndExpand"></Button>
-                </StackLayout>
+                <Button Text="Add Item" Clicked="OnSaveButtonClicked" HorizontalOptions="FillAndExpand"></Button>
+
+                <Label IsVisible="False" x:Name="label" FontSize="Medium" HorizontalTextAlignment="Center" />
 
             </StackLayout>
         </ScrollView>

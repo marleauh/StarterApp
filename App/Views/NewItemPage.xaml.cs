@@ -19,11 +19,9 @@ public partial class NewItemPage : ContentPage
             // Saves the current data that was entered into the form and puts it into the db
             await App.Database.SaveItemAsync(item);
         }
-        await Shell.Current.GoToAsync("ItemListPage");
-    }
 
-    async void OnCancelButtonClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("MainPage");
+        // Changes the label based on what the ItemName is
+        label.IsVisible = true;
+        label.Text = item.ItemName + " was added to the database!";
     }
 }
