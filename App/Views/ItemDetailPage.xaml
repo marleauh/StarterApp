@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.ItemDetailPage"
+             Title="Item Detail Page">
+    <StackLayout Padding="5" BackgroundColor="LightGray">
+        <Rectangle HeightRequest="3" BackgroundColor="Black" />
+        <Label FontAttributes="Bold" FontSize="Title">Item Name:</Label>
+        <Label Text="{Binding ItemName}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="Subtitle" />
+        <Label FontAttributes="Bold" FontSize="Title">Item Number:</Label>
+        <Label Text="{Binding ItemNumber}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="Subtitle" />
+        <Label FontAttributes="Bold" FontSize="Title">Item Price:</Label>
+        <Label Text="{Binding ItemPrice}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="Subtitle" />
+        <Rectangle HeightRequest="3" BackgroundColor="Black" />
+    </StackLayout>
+</ContentPage>

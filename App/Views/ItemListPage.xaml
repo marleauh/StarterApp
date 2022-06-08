@@ -9,30 +9,32 @@
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <CollectionView x:Name="ItemsListView">
+    <CollectionView x:Name="ItemsListView"
+                SelectionMode="Single"
+                SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical"
                                    ItemSpacing="10" />
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout Padding="5" x:DataType="model:Item" BackgroundColor="LightGray">
+                <StackLayout Padding="5" BackgroundColor="LightGray">
                     <Rectangle HeightRequest="3" BackgroundColor="Black" />
-                    <Label FontAttributes="Bold" FontSize="20">Item Name:</Label>
+                    <Label FontAttributes="Bold" FontSize="Subtitle">Item Name:</Label>
                     <Label Text="{Binding ItemName}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                    <Label FontAttributes="Bold" FontSize="20">Item Number:</Label>
+                            FontSize="Body" />
+                    <Label FontAttributes="Bold" FontSize="Subtitle">Item Number:</Label>
                     <Label Text="{Binding ItemNumber}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                    <Label FontAttributes="Bold" FontSize="20">Item Price:</Label>
+                            FontSize="Body" />
+                    <Label FontAttributes="Bold" FontSize="Subtitle">Item Price:</Label>
                     <Label Text="{Binding ItemPrice}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
+                            FontSize="Body" />
                     <Rectangle HeightRequest="3" BackgroundColor="Black" />
                 </StackLayout>
             </DataTemplate>

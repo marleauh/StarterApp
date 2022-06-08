@@ -10,6 +10,7 @@ public partial class AppShell : Shell
 
         // Register routes below
 
+        Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
         Routing.RegisterRoute(nameof(ItemListPage), typeof(ItemListPage));
         Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
