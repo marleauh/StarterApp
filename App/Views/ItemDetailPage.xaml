@@ -21,5 +21,11 @@
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="Subtitle" />
         <Rectangle HeightRequest="3" BackgroundColor="Black" />
+        <StackLayout TranslationY="5" Orientation="Horizontal">
+            <Button Text="Delete Item" Clicked="OnDeleteButtonClicked" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <Label IsVisible="False" x:Name="label" FontSize="Medium" HorizontalTextAlignment="Center" />
+
     </StackLayout>
 </ContentPage>

@@ -36,4 +36,16 @@ public partial class ItemDetailPage : ContentPage
             Console.WriteLine("Failed to load item.");
         }
     }
+    async void OnDeleteButtonClicked(object sender, EventArgs e)
+    {
+        var item = (Item)BindingContext;
+        if (!string.IsNullOrWhiteSpace(item.ItemName))
+        {
+            await App.Database.DeleteItemAsync(item);
+        }
+
+        // Changes the label based on what the ItemName is
+        label.IsVisible = true;
+        label.Text = item.ItemName + " was deleted from the database!";
+    }
 }
