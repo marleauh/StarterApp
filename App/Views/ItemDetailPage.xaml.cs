@@ -36,6 +36,7 @@ public partial class ItemDetailPage : ContentPage
             Console.WriteLine("Failed to load item.");
         }
     }
+    
     async void OnDeleteButtonClicked(object sender, EventArgs e)
     {
         var item = (Item)BindingContext;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:App.ViewModels"
+             xmlns:local="clr-namespace:App.ViewModels"
              xmlns:model="clr-namespace:App.Models"
              x:Class="App.Views.ItemListPage"
              Title="Item List Page">
@@ -9,7 +9,8 @@
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <CollectionView x:Name="ItemsListView"
+    <RefreshView x:DataType="local:ItemViewModel">
+        <CollectionView x:Name="ItemsListView"
                 SelectionMode="Single"
                 SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
@@ -18,7 +19,7 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout Padding="5" BackgroundColor="LightGray">
+                <StackLayout Padding="5" x:DataType="model:Item" BackgroundColor="LightGray">
                     <Rectangle HeightRequest="3" BackgroundColor="Black" />
                     <Label FontAttributes="Bold" FontSize="Subtitle">Item Name:</Label>
                     <Label Text="{Binding ItemName}" 
@@ -39,5 +40,6 @@
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-    </CollectionView>
+        </CollectionView>
+    </RefreshView>
 </ContentPage>
