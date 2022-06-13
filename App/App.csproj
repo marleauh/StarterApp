@@ -52,6 +52,9 @@
 	  <None Remove="Resources\Images\home_icon.png" />
 	  <None Remove="Resources\Images\item_list_icon.png" />
 	  <None Remove="Resources\Images\new_item_icon.png" />
+	  <None Remove="Resources\Images\old_home_icon.png" />
+	  <None Remove="Resources\Images\old_item_list_icon.png" />
+	  <None Remove="Resources\Images\old_new_item_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>

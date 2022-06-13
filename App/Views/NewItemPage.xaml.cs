@@ -1,4 +1,5 @@
 using App.Models;
+using App.ViewModels;
 
 namespace App.Views;
 
@@ -19,6 +20,8 @@ public partial class NewItemPage : ContentPage
             // Saves the current data that was entered into the form and puts it into the db
             await App.Database.SaveItemAsync(item);
         }
+
+        await Navigation.PushAsync(new NewItemPage());
 
         // Changes the label based on what the ItemName is
         label.IsVisible = true;
