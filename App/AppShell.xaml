@@ -12,10 +12,6 @@
             Icon="home_icon.png"
             ContentTemplate="{DataTemplate views:MainPage}"/>
         <ShellContent
-            Title="New Item"
-            Icon="new_item_icon.png"
-            ContentTemplate="{DataTemplate views:NewItemPage}"/>
-        <ShellContent
             Title="Item List"
             Icon="item_list_icon.png"
             ContentTemplate="{DataTemplate views:ItemListPage}"/>

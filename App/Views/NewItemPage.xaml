@@ -18,7 +18,7 @@
 
                 <Button Text="Add Item" Clicked="OnSaveButtonClicked" HorizontalOptions="FillAndExpand"></Button>
 
-                <Label IsVisible="False" x:Name="label" FontSize="Medium" HorizontalTextAlignment="Center" />
+                <Label IsVisible="False" FontSize="Medium" HorizontalTextAlignment="Center" />
 
             </StackLayout>
         </ScrollView>

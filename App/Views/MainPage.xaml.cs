@@ -10,5 +10,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 		BindingContext = new MainPageViewModel();
 	}
+    async void OnButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NewItemPage());
+    }
 }
 

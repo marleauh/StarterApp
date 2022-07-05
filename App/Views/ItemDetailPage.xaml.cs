@@ -45,8 +45,6 @@ public partial class ItemDetailPage : ContentPage
             await App.Database.DeleteItemAsync(item);
         }
 
-        // Changes the label based on what the ItemName is
-        label.IsVisible = true;
-        label.Text = item.ItemName + " was deleted from the database!";
+        await Navigation.PopAsync();
     }
 }

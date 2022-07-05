@@ -13,7 +13,6 @@
 
             <Image
                 Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
                 
@@ -29,14 +28,26 @@
                 FontSize="20"
                 HorizontalOptions="Center" />
 
-            <Button 
-                x:Name="GitHubBtn"
-                Text="My GitHub"
-                SemanticProperties.Hint="Redirects you to my GitHub repository"
-                SemanticProperties.Description="You are free to clone and use my starting point to create something amazing!"
-                Command="{Binding GitHubCommand}"
-                HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                
+                <!-- This button uses MainPageViewModel.cs -->
+                <Button 
+                    x:Name="GitHubBtn"
+                    Text="My GitHub"
+                    SemanticProperties.Hint="Redirects you to my GitHub repository"
+                    SemanticProperties.Description="You are free to clone and use my starting point to create something amazing!"
+                    Command="{Binding GitHubCommand}"
+                    HorizontalOptions="Center" />
 
+                <!-- This button uses MainPage.xaml.cs -->
+                <Button
+                    Text="Add Item"
+                    SemanticProperties.Hint="Redirects you to the new item page"
+                    SemanticProperties.Description="This will allow users to add items to the database from the app"
+                    Clicked="OnButtonClicked"
+                    HorizontalOptions="Center" />
+                
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
  

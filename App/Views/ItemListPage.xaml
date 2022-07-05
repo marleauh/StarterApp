@@ -9,8 +9,8 @@
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <RefreshView x:DataType="local:ItemViewModel">
-        <CollectionView x:Name="ItemsListView"
+
+    <CollectionView x:Name="ItemsListView"
                 SelectionMode="Single"
                 SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
@@ -40,6 +40,5 @@
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+    </CollectionView>
 </ContentPage>

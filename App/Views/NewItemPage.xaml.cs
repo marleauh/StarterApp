@@ -21,10 +21,6 @@ public partial class NewItemPage : ContentPage
             await App.Database.SaveItemAsync(item);
         }
 
-        await Navigation.PushAsync(new NewItemPage());
-
-        // Changes the label based on what the ItemName is
-        label.IsVisible = true;
-        label.Text = item.ItemName + " was added to the database!";
+        await Navigation.PopAsync();
     }
 }
